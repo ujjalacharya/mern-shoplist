@@ -1,0 +1,17 @@
+{
+  "name": "mern-shop",
+  "version": "1.0.0",
+  "description": "App on MERN stack for shopping list items",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "author": "Ujjal Acharya",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.3"
+  }
+}
