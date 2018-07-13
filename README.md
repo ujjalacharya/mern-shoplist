@@ -4,7 +4,7 @@
     ##### Create Store: It's the entry point for redux, it'll import things from the reducer
 
 **Step2**
-    ##### Wrap app component by <Provider> import from 'react-redux'
+    ##### Wrap app component by Provider,  import from 'react-redux'
 
 **Step3**
     ##### Make reducer

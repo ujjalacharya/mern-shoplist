@@ -4,14 +4,11 @@ import {
     Modal,
     ModalHeader,
     ModalBody,
-    ModalFooter,
     Form,
     FormGroup,
-    Label,
     Input,
     Container
 } from 'reactstrap';
-import uuid from 'uuid';
 import { connect } from 'react-redux';
 import { addItem } from '../actions/itemActions';
 
@@ -38,8 +35,9 @@ class AddItemModal extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        const newitem = { id: uuid(), name: this.state.name }
+        const newitem = {name: this.state.name }
         this.props.addItem(newitem)
+        this.setState({name: ''})
         this.toggle();
     }
 
@@ -52,7 +50,7 @@ class AddItemModal extends Component {
                     <ModalBody>
                         <Form onSubmit={this.handleSubmit}>
                             <FormGroup>
-                                <Input type="text" name="name" id="itemname" className="mb-2" onChange={this.handleChange} value={this.state.name} />
+                                <Input type="text" name="name" id="itemname" className="mb-2"  onChange={this.handleChange} value={this.state.name} />
                                 <Button color="dark" block>Add</Button>
                             </FormGroup>
                         </Form>
